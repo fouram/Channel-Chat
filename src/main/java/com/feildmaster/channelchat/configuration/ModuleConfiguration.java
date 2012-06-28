@@ -25,7 +25,7 @@ public class ModuleConfiguration extends EnhancedConfiguration {
      * @param configName The name of the default YamlConfiguration file. (Ex: "PluginConfig.yml")
      */
     public ModuleConfiguration(JavaPlugin p, String configName) {
-        super(new File(new File("plugins/ChannelChat/modules"), configName), p);
+        super(new File(new File(p.getServer().getPluginManager().getPlugin("ChannelChat").getDataFolder(),File.separator + "modules"), configName), p);
 
         loadDefaults(configName);
     }
